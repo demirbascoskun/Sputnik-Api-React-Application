@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import News from "./components/News";
+import NewsDetail from './components/NewsDetail'
+import {Routes,Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+		<header>
+			<h1><a href="index.html">Programming with Harun</a></h1>
+	
+		</header>
+	
+	
+		<div id="secwrapper">
+	
+			<section>
+        <Routes>
+        <Route path="/" element={<News/>}/>
+        <Route path=":id" element={<NewsDetail/>}/>
+        </Routes>
+			
+      
+
+			</section>
+		</div>
+		<footer>
+			<p>Copyright &copy 2012 BoxPress by Youssef Nassim. All Rights Reserved.</p>
+		</footer>
+	
+	
+	</div>
   );
 }
 
